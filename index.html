@@ -20,6 +20,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
   font-family:'Cairo',sans-serif;
   background:radial-gradient(circle at top right,#0e1c3f,#050b1a 60%);
@@ -29,11 +30,14 @@ body{
 
 a{text-decoration:none;color:inherit}
 
+/* ===== Header ===== */
 header{
+  position:relative;
+  z-index:10;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:28px 6%;
+  padding:26px 6%;
 }
 
 .brand{
@@ -72,7 +76,10 @@ header{
   font-weight:700;
 }
 
+/* ===== Hero ===== */
 .hero{
+  position:relative;
+  z-index:5;
   text-align:center;
   padding:90px 8% 70px;
 }
@@ -99,6 +106,7 @@ header{
   padding:14px 30px;
   border-radius:999px;
   font-weight:700;
+  cursor:pointer;
 }
 
 .btn.primary{
@@ -110,6 +118,7 @@ header{
   border:1px solid var(--border);
 }
 
+/* ===== Section ===== */
 section{
   padding:70px 8%;
 }
@@ -155,6 +164,7 @@ section{
   color:var(--secondary);
 }
 
+/* ===== Footer ===== */
 footer{
   text-align:center;
   padding:40px;
@@ -183,8 +193,8 @@ footer{
 <section class="hero">
   <h1>حوّل بحثك إلى نسخة احترافية جاهزة للتسليم</h1>
   <p>
-    منصة أكاديمية متخصصة لدعم الطلاب والباحثين في الصياغة، المراجعة، التنسيق،
-    التصميم المرئي، والعروض الاحترافية.
+    منصة أكاديمية متخصصة لدعم الطلاب والباحثين في الصياغة، المراجعة،
+    التنسيق، التصميم المرئي، والعروض الاحترافية.
   </p>
 
   <div class="hero-buttons">
