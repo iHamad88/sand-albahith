@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Baheth Plus | Professional Academic Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0a1024;
+  --surface:#121a36;
+  --card:#161f42;
+  --primary:#3fa9f5;
+  --accent:#5ddcff;
+  --text:#ffffff;
+  --muted:#a9b4d0;
+  --border:rgba(255,255,255,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.8;
+}
+
+/* Header */
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(10,16,36,.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  padding:20px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:20px;
+  font-weight:800;
+}
+
+.brand img{
+  height:40px;
+}
+
+.btn-wa{
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:#001;
+  padding:10px 24px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* Hero */
+.hero{
+  padding:110px 8% 90px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:44px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:760px;
+  margin:0 auto 45px;
+  color:var(--muted);
+  font-size:18px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn-main{
+  background:var(--primary);
+  color:#001;
+  padding:14px 38px;
+  border-radius:14px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.btn-ghost{
+  border:1px solid var(--border);
+  padding:14px 38px;
+  border-radius:14px;
+  color:var(--text);
+  text-decoration:none;
+}
+
+/* Section */
+section{
+  padding:90px 8%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:60px;
+}
+
+/* Services */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+
+.service{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:32px;
+  transition:.3s;
+}
+
+.service:hover{
+  transform:translateY(-6px);
+  border-color:rgba(93,220,255,.4);
+}
+
+.service h3{
+  font-size:20px;
+  margin-bottom:14px;
+}
+
+.service p{
+  color:var(--muted);
+  font-size:15px;
+}
+
+/* Footer */
+footer{
+  border-top:1px solid var(--border);
+  padding:35px;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+}
+
+@media(max-width:700px){
+  .hero h1{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <img src="logo.png" alt="Baheth Plus">
+    Baheth Plus
+  </div>
+
+  <a class="btn-wa" href="https://wa.me/966532013137" target="_blank">
+    Contact via WhatsApp
+  </a>
+</header>
+
+<div class="hero">
+  <h1>Transform Your Research into a Submission-Ready Academic Work</h1>
+  <p>
+    A professional academic platform supporting students and researchers with
+    scientific writing, proofreading, formatting, report design,
+    and academic infographics.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#services" class="btn-main">Explore Services</a>
+    <a href="https://wa.me/966532013137" class="btn-ghost">Get Started</a>
+  </div>
+</div>
+
+<section id="services">
+  <h2 class="section-title">Our Professional Services</h2>
+
+  <div class="services">
+
+    <div class="service">
+      <h3>✍️ Academic Writing & Editing</h3>
+      <p>Language enhancement and academic style refinement (Arabic & English).</p>
+    </div>
+
+    <div class="service">
+      <h3>📚 References & Citations</h3>
+      <p>Accurate citation and reference formatting (APA, Vancouver, Harvard).</p>
+    </div>
+
+    <div class="service">
+      <h3>📄 Final Formatting</h3>
+      <p>Professional formatting of theses, papers, and manuscripts (Word / PDF).</p>
+    </div>
+
+    <div class="service">
+      <h3>📊 Report Design</h3>
+      <p>Professional reports with structured layouts, tables, and charts.</p>
+    </div>
+
+    <div class="service">
+      <h3>🎨 Academic Infographics</h3>
+      <p>Visual infographics for research papers, posters, and presentations.</p>
+    </div>
+
+    <div class="service">
+      <h3>📑 Presentations</h3>
+      <p>High-quality PowerPoint presentations for defenses and conferences.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Baheth Plus — Professional Academic Support Platform
+</footer>
+
+</body>
+</html>
