@@ -1,219 +1,263 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>باحث+ | دعم أكاديمي احترافي</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>باحث بلس | Baheth+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Arabic Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --navy:#0B132B;
-  --navy-soft:#1C2541;
-  --teal:#3A86FF;
-  --mint:#4CC9F0;
-  --gold:#F4D35E;
-  --text:#F8F9FA;
-  --muted:#ADB5BD;
-  --glass:rgba(255,255,255,0.06);
-}
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Cairo",sans-serif;
+      background:radial-gradient(circle at top,#0f172a,#020617);
+      color:#e5e7eb;
+      line-height:1.8;
+    }
 
-*{box-sizing:border-box;margin:0;padding:0}
+    a{text-decoration:none;color:inherit}
 
-body{
-  font-family:"Tajawal",sans-serif;
-  background:linear-gradient(135deg,var(--navy),var(--navy-soft));
-  color:var(--text);
-  line-height:1.8;
-}
+    /* Header */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 60px;
+    }
 
-/* HEADER */
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:24px 48px;
-  background:rgba(0,0,0,.35);
-  backdrop-filter:blur(14px);
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:20px;
+      font-weight:800;
+    }
 
-header .brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
+    .brand img{
+      width:42px;
+      height:42px;
+    }
 
-header img{
-  height:54px;
-}
+    .whatsapp{
+      background:linear-gradient(135deg,#38bdf8,#4ade80);
+      padding:10px 22px;
+      border-radius:999px;
+      font-weight:700;
+      color:#020617;
+    }
 
-header h1{
-  font-family:"IBM Plex Sans Arabic",sans-serif;
-  font-size:22px;
-  font-weight:700;
-}
+    /* Hero */
+    .hero{
+      max-width:900px;
+      margin:80px auto 60px;
+      text-align:center;
+      padding:0 20px;
+    }
 
-header a{
-  background:linear-gradient(135deg,var(--teal),var(--mint));
-  color:#fff;
-  padding:12px 22px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:600;
-}
+    .hero h1{
+      font-size:42px;
+      font-weight:900;
+      margin-bottom:20px;
+    }
 
-/* HERO */
-.hero{
-  max-width:1100px;
-  margin:90px auto;
-  padding:0 24px;
-  text-align:center;
-}
+    .hero p{
+      color:#94a3b8;
+      font-size:17px;
+      max-width:700px;
+      margin:auto;
+    }
 
-.hero h2{
-  font-family:"IBM Plex Sans Arabic",sans-serif;
-  font-size:44px;
-  margin-bottom:18px;
-}
+    .actions{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      gap:15px;
+      flex-wrap:wrap;
+    }
 
-.hero p{
-  color:var(--muted);
-  font-size:18px;
-  max-width:720px;
-  margin:0 auto 40px;
-}
+    .btn{
+      padding:12px 28px;
+      border-radius:999px;
+      font-weight:700;
+      border:1px solid #334155;
+      background:#020617;
+      color:#e5e7eb;
+    }
 
-.buttons{
-  display:flex;
-  gap:16px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
+    .btn.primary{
+      background:linear-gradient(135deg,#38bdf8,#60a5fa);
+      color:#020617;
+      border:none;
+    }
 
-.btn{
-  padding:14px 30px;
-  border-radius:16px;
-  font-weight:600;
-  text-decoration:none;
-}
+    /* Sections */
+    .wrap{
+      max-width:1200px;
+      margin:auto;
+      padding:0 20px;
+    }
 
-.btn.primary{
-  background:linear-gradient(135deg,var(--teal),var(--mint));
-  color:#fff;
-}
+    section{margin-bottom:80px}
 
-.btn.secondary{
-  border:1px solid rgba(255,255,255,.25);
-  color:var(--text);
-}
+    h2{
+      text-align:center;
+      font-size:28px;
+      font-weight:900;
+      margin-bottom:40px;
+    }
 
-/* SECTIONS */
-section{
-  max-width:1200px;
-  margin:100px auto;
-  padding:0 24px;
-}
+    /* Services Grid */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
 
-section h3{
-  font-family:"IBM Plex Sans Arabic",sans-serif;
-  font-size:32px;
-  text-align:center;
-  margin-bottom:36px;
-}
+    .card{
+      background:linear-gradient(180deg,#020617,#020617cc);
+      border:1px solid #1e293b;
+      border-radius:18px;
+      padding:25px;
+      transition:.3s;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:26px;
-}
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:#38bdf8;
+    }
 
-.card{
-  background:var(--glass);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:22px;
-  padding:30px;
-  transition:.3s;
-}
+    .icon{
+      font-size:30px;
+      margin-bottom:10px;
+    }
 
-.card:hover{
-  transform:translateY(-6px);
-  border-color:var(--mint);
-}
+    .card h3{
+      font-weight:900;
+      font-size:18px;
+      margin-bottom:10px;
+    }
 
-.card h4{
-  font-size:20px;
-  margin-bottom:12px;
-}
+    .card ul{
+      list-style:none;
+      color:#94a3b8;
+      font-size:14px;
+    }
 
-.card p{
-  font-size:15px;
-  color:var(--muted);
-}
+    .card ul li::before{
+      content:"✔ ";
+      color:#38bdf8;
+      font-weight:bold;
+    }
 
-/* FOOTER */
-footer{
-  border-top:1px solid rgba(255,255,255,.08);
-  text-align:center;
-  padding:40px 20px;
-  color:var(--muted);
-}
-</style>
+    /* Footer */
+    footer{
+      text-align:center;
+      padding:30px;
+      color:#64748b;
+      font-size:14px;
+      border-top:1px solid #1e293b;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
+  <div class="whatsapp">تواصل واتساب</div>
+
   <div class="brand">
-    <!-- ضع اللوقو هنا -->
-    <img src="logo.png" alt="باحث+">
-    <h1>باحث+</h1>
+    <span>باحث+</span>
+    <img src="logo.png" alt="Baheth Plus Logo">
   </div>
-  <a href="https://wa.me/966XXXXXXXXX">تواصل واتساب</a>
 </header>
 
-<div class="hero">
-  <h2>حوّل بحثك إلى نسخة احترافية جاهزة للتسليم</h2>
+<!-- HERO -->
+<section class="hero">
+  <h1>حوّل بحثك إلى نسخة احترافية جاهزة للتسليم</h1>
   <p>
     منصة أكاديمية متخصصة لدعم الطلاب والباحثين في الصياغة، المراجعة،
     التنسيق الأكاديمي، والاستشهادات العلمية.
   </p>
 
-  <div class="buttons">
-    <a href="#services" class="btn primary">استعراض الخدمات</a>
-    <a href="https://wa.me/966XXXXXXXXX" class="btn secondary">ابدأ الآن</a>
+  <div class="actions">
+    <a class="btn primary">استعراض الخدمات</a>
+    <a class="btn">ابدأ الآن</a>
   </div>
-</div>
+</section>
 
-<section id="services">
-  <h3>الخدمات</h3>
+<!-- SERVICES -->
+<section id="services" class="wrap">
+  <h2>خدماتنا الاحترافية</h2>
 
   <div class="grid">
+
     <div class="card">
-      <h4>✍️ التحرير والصياغة الأكاديمية</h4>
-      <p>تحسين اللغة والأسلوب الأكاديمي عربي / إنجليزي.</p>
+      <div class="icon">✍️</div>
+      <h3>التحرير والصياغة الأكاديمية</h3>
+      <ul>
+        <li>تحسين الأسلوب واللغة العلمية</li>
+        <li>إعادة صياغة احترافية</li>
+        <li>تنظيم الفقرات والعناوين</li>
+      </ul>
     </div>
 
     <div class="card">
-      <h4>📚 المراجع والاستشهادات</h4>
-      <p>تنسيق APA / Vancouver وتدقيق الاقتباسات.</p>
+      <div class="icon">📚</div>
+      <h3>المراجع والاستشهادات</h3>
+      <ul>
+        <li>APA / Vancouver / Harvard</li>
+        <li>تدقيق الاقتباسات</li>
+        <li>مطابقة متطلبات المجلات</li>
+      </ul>
     </div>
 
     <div class="card">
-      <h4>📄 التنسيق النهائي</h4>
-      <p>تنسيق Word و PDF حسب متطلبات الجامعات.</p>
+      <div class="icon">📄</div>
+      <h3>التنسيق النهائي</h3>
+      <ul>
+        <li>Word / PDF / رسائل جامعية</li>
+        <li>تنسيق حسب دليل الجامعة</li>
+        <li>جاهز للتسليم</li>
+      </ul>
     </div>
 
     <div class="card">
-      <h4>📊 العروض التقديمية</h4>
-      <p>تحويل البحث إلى عرض PowerPoint احترافي.</p>
+      <div class="icon">📊</div>
+      <h3>العروض التقديمية</h3>
+      <ul>
+        <li>PowerPoint احترافي</li>
+        <li>تلخيص بصري للأبحاث</li>
+        <li>عرض واضح ومقنع</li>
+      </ul>
     </div>
+
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h3>تصميم الإنفوجراف</h3>
+      <ul>
+        <li>تحويل البيانات إلى رسوم</li>
+        <li>إنفوجراف علمي وأكاديمي</li>
+        <li>مناسب للنشر والعرض</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="icon">📑</div>
+      <h3>إعداد التقارير الاحترافية</h3>
+      <ul>
+        <li>تقارير بحثية وإدارية</li>
+        <li>تنظيم وتحليل المحتوى</li>
+        <li>تصميم أنيق وواضح</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  © 2026 باحث+ — دعم أكاديمي احترافي
+  © 2026 باحث بلس — جميع الحقوق محفوظة
 </footer>
 
 </body>
